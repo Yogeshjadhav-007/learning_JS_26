@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h2>Slice example</h2>");
+      var a = ["yogesh", "eknath", "vaibhav", "sahil", "ram", "om"];
+      document.write(a, "<br>");
+      var b = a.slice(0,3);
+      document.write(b, "<br>");
+
+      document.write("<h2>Splice example</h2>");
+      var x = ["yogesh", "eknath", "vaibhav", "sahil", "ram", "om"];
+      document.write(x,"<br>");
+      x.splice(2,3,"virat","rohit");//(index,how many del,"new value")
+      document.write(x,"<br>");
+    </script>
+  </body>
+</html>

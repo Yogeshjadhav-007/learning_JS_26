@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <style>
+    body{
+        background-color: white;
+        color: black;
+    }
+    .dark-mode{
+        background-color: black;
+        color: white;
+    }
+  </style>
+  <body>
+    <h1>Change Text using DOM</h1>
+    <h2 id="title">Old Heading</h2>
+    <button onclick="changeText()">Click here to change text</button>
+
+    <!-- ex 2 -->
+    <h1>Change text color</h1>
+    <h2 id="msg">Hello i'm Yogesh</h2>
+    <button onclick="changecolor()">Click here to change text color</button>
+
+    <!-- ex 3 -->
+    <h1>Change Image using DOM</h1>
+    <img src="img/pune city.jpg" alt="" id="myimg" width="400px" />
+    <button onclick="changeimg()">Click here to change image</button>
+
+    <!-- ex 4 -->
+    <h1>input from user</h1>
+    <input type="text" id="nameinput" placeholder="Enter name" />
+    <button onclick="showName()">Submit</button>
+    <h1 id="output"></h1>
+    <!-- ex 5 -->
+    <h1>Change text color</h1>
+    <h2 id="size">Hello i'm Yogesh</h2>
+    <button onclick="increse()"> + </button>
+    <button onclick="decrese()"> - </button>
+    <button onclick="toggleTheme()">Toggle theme</button>
+    <script>
+        let size = 16;
+        function increse(){
+            size++;
+            document.getElementById('size').style.fontSize = size + 'px';
+        }
+        function decrese(){
+            size--;
+            document.getElementById('size').style.fontSize = size + 'px';
+        }
+    </script>
+    <!-- toggle theme -->
+    <script>
+        const toggleTheme = () => document.body.classList.toggle("dark-mode");
+    </script>
+
+    <!-- ex 6 -->
+    <p id="deletetext"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum vero minima adipisci iure. Eos eligendi iure quas dolore. Dignissimos suscipit quaerat modi harum expedita similique! Quo modi voluptates fugit!</p>
+    <button onclick="remove()">Delete text</button>
+    <script>
+        function remove(){
+            document.getElementById('deletetext').remove();
+        }
+    </script>
+    
+
+    <script>
+      function showName() {
+        let name = document.getElementById("nameinput").value;
+        document.getElementById("output").innerHTML =
+          "Hello Welcome to Fct " + name;
+      }
+    </script>
+
+    <script>
+      function changeimg() {
+        document.getElementById("myimg").src = "img/pune2.jpg";
+      }
+    </script>
+    <script>
+      function changecolor() {
+        document.getElementById("msg").style.color = "purple";
+      }
+    </script>
+    <script>
+      function changeText() {
+        document.getElementById("title").innerHTML = "New Heading";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- //onresize resize not possible alert shown-->
+ <!-- onkeypress keys press not allowed-->
+  <!-- onscroll scroll not allowed -->
+<body onselectstart="return false">
+    <button onclick="hello()">single click</button>
+    <button ondblclick="hello()">double click</button>
+    <button oncontextmenu="hello()">right click</button>
+    <button onmouseenter="hello()">mouse click</button>
+    <button onmouseout="hello()">out mouse click</button>
+    <h1>hello</h1>
+    
+    <script>
+        function hello(){
+            alert("hello its a key events");
+        }
+    </script>
+</body>
+</html>
